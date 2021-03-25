@@ -1,0 +1,68 @@
+/* Fonts */
+.icelandFont{
+    font-family: 'Iceland', cursive;
+}
+
+.titleFont, h1{
+    font-family: 'Bangers', cursive;
+    color: #000F08;
+
+}
+
+/* Color text */
+.textWhite{
+    color: white;
+}
+
+body{
+    margin: 0;
+}
+
+
+/* Header */
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #000F08;
+}
+
+.titleHeader{
+padding-left: 30px;
+}
+
+nav{
+    padding: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 500px;
+}
+
+
+/* Lien */
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline 2px;
+}
+
+h1{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Footer */
+
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: #000F08;
+}
+
+main{
+    margin: O;
+    background-color: #9CAEA9;
+}
