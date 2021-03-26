@@ -66,3 +66,32 @@ main{
     margin: O;
     background-color: #9CAEA9;
 }
+
+/* Main */
+
+#titleJavascriptProject{
+    padding: 40px 0px;
+}
+
+#refreshingIcon{
+    width: 50px;
+    height: auto;
+    padding-left: 100px;
+}
+
+#feed{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.blagues{
+    width: 500px;
+    height: auto;
+    margin: 20px;
+    padding: 20px;
+    background-color: #CCDAD1;
+    border: 5px solid #000F08;
+    border-radius: 20px;
+}
