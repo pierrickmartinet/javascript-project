@@ -95,3 +95,9 @@ main{
     border: 5px solid #000F08;
     border-radius: 20px;
 }
+
+.fotorama{
+display: flex;
+justify-content: center;
+
+}
