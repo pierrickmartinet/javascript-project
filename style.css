@@ -30,13 +30,6 @@ header{
 padding-left: 30px;
 }
 
-nav{
-    padding: 30px;
-    display: flex;
-    justify-content: space-evenly;
-    width: 500px;
-}
-
 
 /* Lien */
 a{
@@ -96,8 +89,53 @@ main{
     border-radius: 20px;
 }
 
+/* Caroussel */
+
 .fotorama{
 display: flex;
 justify-content: center;
-
 }
+
+/* Menu DropDown */
+
+.dropdown {
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+    background: #CCDAD1;
+    border: solid 1px #000F08;
+    width: 200px;
+    margin: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+  }
+  .icon {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px 0 10px;
+  }
+  .menu {
+
+    height: 160px;
+  }
+  .menu li {
+    font-size: 20px;
+    padding: 14px 10px;
+    border-top: solid 1px #000F08;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+    color: #000F08;
+  }
+
+  .dropdown.closed .menu {
+    height: 0px;
+  }
+  .dropdown.closed .icon span {
+    transform: rotate(180deg);
+  }

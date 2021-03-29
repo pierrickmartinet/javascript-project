@@ -35,26 +35,14 @@
         <div class="titleHeader">
             <h2 class="textWhite titleFont">Javascript Project</h2>
         </div>
-       <!-- <div>
-            <nav>
-                <div>
-                    <a href="index.html">Accueil</a>
-                </div>
-                <div>
-                    <a href="gallerie.html">Gallerie</a>
-                </div>
-                <div>
-                    <a href="jeu.html">Jeu</a>
-                </div>
-            </nav>
-        </div> -->
-        <div class="dropdown">
-            <button onclick="myFunction()">Menu</button>
-            <div>
-              <a href="index.html">Index</a>
-              <a href="gallerie.html">Gallerie</a>
-              <a href="jeu.html">Jeu</a>
-            </div>
+        <!-- Menu dropdown -->
+        <div class="dropdown closed">
+            <h2 class="icon">Menu<span>∆</span></h2>
+            <ul class="menu">
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="gallerie.html">Gallerie</a></li>
+              <li><a href="jeu.html">Jeu</a></li>
+            </ul>
           </div>
 
     </header>
@@ -64,7 +52,6 @@
         <h1 id="titleJavascriptProject">Accueil</h1>
 
         <!-- Carrousel d'image -->
-
 <div class="fotorama" data-transition="slide" data-loop="true" data-autoplay="3000">
     <img src="images/chuckjoke1.jpg">
     <img src="images/chuckjoke3.jpg">
