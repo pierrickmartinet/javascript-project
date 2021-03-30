@@ -191,6 +191,11 @@ justify-content: center;
   height: auto;
 }
 
+.iconGalleryAdd{
+  width: 5%;
+  height: auto;
+}
+
 #divIconGallery{
   display: flex;
   justify-content: space-evenly;

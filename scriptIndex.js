@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     // Appelle et traitement API par requête Ajax
 
-    $.getJSON("http://api.icndb.com/jokes/random/20")
+    $.getJSON("https://api.icndb.com/jokes/random/20")
 
         // En cas de succés de la requête Ajax
         .done(function (response) {

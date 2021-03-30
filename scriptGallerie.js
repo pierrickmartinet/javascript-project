@@ -53,4 +53,11 @@ $(document).ready(function () {
 
     })
 
+    // Ajout d'une image
+
+    // Affichage du formulaire d'ajout
+    // Formulaire en HTML / CSS qui s'affiche au click du +
+
+    // Ajout de l'image à la gallerie
+    // Incorporer l'image au bon endroit avec comme source l'url de l'image stocké dans une variable
 });
