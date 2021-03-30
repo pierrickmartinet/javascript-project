@@ -67,7 +67,6 @@ $(document).ready(function () {
         let joke = document.getElementById('joke').value;
         // les variables name et joke sont insérés dans le DOM avec les autres blagues
         $('<div class="blagues">'+ '<div>' + name + '</div>' + '<div>' + joke + '</div>' + '</div>').prependTo('#feed');
-
     }
 
 });

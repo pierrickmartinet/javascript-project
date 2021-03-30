@@ -43,6 +43,7 @@ a:hover{
 
 h1{
     margin: 0;
+    padding: 40px 0px;
     display: flex;
     justify-content: center;
 }
@@ -62,9 +63,6 @@ main{
 
 /* Main */
 
-#titleJavascriptProject{
-    padding: 40px 0px;
-}
 
 #refreshingIcon{
     width: 50px;
@@ -156,4 +154,45 @@ justify-content: center;
   background-color: #CCDAD1;
   margin: 20px 200px;
   padding: 10px 0px;
+}
+
+
+/* Gallery image */
+
+.imgGalleryMosaic{
+  height: auto;
+  width: 40%;
+  margin: 5px;
+}
+
+.imgGalleryColumn{
+  height: auto;
+  width: 50%;
+  margin: 5px;
+}
+
+
+#imgGallery{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+/* Icon Gallery */
+
+.iconGalleryMosaic{
+  width: 5%;
+  height: auto;
+}
+
+.iconGalleryColumn{
+  width: 5%;
+  height: auto;
+}
+
+#divIconGallery{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 4%;
 }
