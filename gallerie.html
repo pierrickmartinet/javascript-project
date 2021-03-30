@@ -13,13 +13,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=M+PLUS+Rounded+1c:wght@300&display=swap"
         rel="stylesheet">
 
-
     <!--Titre et déscription-->
     <title>Javascript-project</title>
     <meta name="Description" content="Bienvenue sur le 1er projet Javascript de Pierrick MARTINET.">
 
     <!--Srcipt-->
-    <script src="scriptGallerie.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+    <script src="scriptGallerie.js" defer></script>
 
 </head>
 
@@ -29,18 +29,14 @@
         <div class="titleHeader">
             <h2 class="textWhite titleFont">Javascript Project</h2>
         </div>
-        <div>
-            <nav>
-                <div>
-                    <a href="index.html">Accueil</a>
-                </div>
-                <div>
-                    <a href="gallerie.html">Gallerie</a>
-                </div>
-                <div>
-                    <a href="jeu.html">Jeu</a>
-                </div>
-            </nav>
+        <!-- Menu dropdown -->
+        <div class="dropdown closed">
+            <h2 class="icon">Menu<span>∆</span></h2>
+            <ul class="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="gallerie.html">Gallerie</a></li>
+                <li><a href="jeu.html">Jeu</a></li>
+            </ul>
         </div>
 
     </header>
@@ -48,7 +44,18 @@
 
     <main>
         <h1>Gallerie</h1>
-
+        <div id="divIconGallery">
+            <img class="iconGalleryMosaic" src="images/mosaicIcon.svg" alt="icone affichage mosaïque">
+            <img class="iconGalleryColumn" src="images/columnIcon.svg" alt="icone affichage colonne">
+        </div>
+        <div id="imgGallery">
+            <img class="imgGalleryColumn imgGalleryMosaic" src="images/chuckGallery1.jpg" alt="Image de chuck Norris">
+            <img class="imgGalleryColumn imgGalleryMosaic" src="images/chuckGallery2.jpg" alt="Image de chuck Norris">
+            <img class="imgGalleryColumn imgGalleryMosaic" src="images/chuckGallery3.jpg" alt="Image de chuck Norris">
+            <img class="imgGalleryColumn imgGalleryMosaic" src="images/chuckGallery4.jpg" alt="Image de chuck Norris">
+            <img class="imgGalleryColumn imgGalleryMosaic" src="images/chuckGallery5.jpg" alt="Image de chuck Norris">
+            <img class="imgGalleryColumn imgGalleryMosaic" src="images/chuckGallery6.jpg" alt="Image de chuck Norris">
+        </div>
     </main>
 
 
