@@ -18,46 +18,103 @@ $(document).ready(function () {
     })
 
 
+    // Affichage du formulaire d'ajout au click sur le "+"
+
+
+    // La variable galleryForm prend pour valeur la div du formulaire de la page Gallerie
+    let galleryForm = document.querySelector('.divContainerFormGallery');
+    // La variable iconGalleryAdd prend pour valeur l'icon iconGalleryAdd
+    let iconGalleryAdd = document.querySelector('.iconGalleryAdd');
+
+
+    iconGalleryAdd.addEventListener('click', (e) => {
+
+
+        // Si la valeur de la classe de la div du galleryForm est égale à "les deux classes présentes" OU "la classe None"
+        if ((galleryForm.classList.value === "divContainerFormGallery divContainerFormGalleryNone") || (galleryForm.classList.value === "divContainerFormGalleryNone")) {
+            // Alors, enlève la classe None et ajoute la classe divContainerFormGallery (Ajoute le formulaire)
+            galleryForm.classList.remove("divContainerFormGalleryNone");
+            galleryForm.classList.add("divContainerFormGallery");
+
+        } else {
+            // Sinon enlève la classe divContainerFormGallery et ajoute la classe None (Cache le formulaire)
+            galleryForm.classList.remove("divContainerFormGallery");
+            galleryForm.classList.add("divContainerFormGalleryNone");
+        }
+
+    })
+
+
     // Gallerie d'image
+
 
     // La variable iconGalleryMosaic prend pour valeur l'icon inconGalleryMosaic
     let iconGalleryMosaic = document.querySelector('.iconGalleryMosaic');
     // La variable iconGalleryColumn prend pour valeur l'icon inconGalleryColumn
     let iconGalleryColumn = document.querySelector('.iconGalleryColumn');
 
-    // La variable imgGallery prend pour valeur un tableau avec les images de la div portant l'id imgGallery
-    let imgGallery = document.querySelectorAll('#imgGallery img');
 
-    
-    // Listener sur l'icon Mosaïque au click de la souris (l'évenement se passe lorsque l'utilisateur clique sur l'icon)
-    iconGalleryMosaic.addEventListener('click', (e) => {
-        index = 0;
-        // Au moment ou l'utilisateur clique sur l'icon, pour chaque image, supression de la classe colonne et ajout de la classe Mosaïque tant qu'il y a des images
-        while(index < imgGallery.length){
-            imgGallery[index].classList.remove("imgGalleryColumn");
-            imgGallery[index].classList.add("imgGalleryMosaic");
-            index = index + 1;
-        }
+    function addImageGallery() {
+        // La variable imgGallery prend pour valeur un tableau avec les images de la div portant l'id imgGallery
+        let imgGallery = document.querySelectorAll('#imgGallery img');
 
-    })
 
-    // Listener sur l'icon Colonne au click de la souris (l'évenement se passe lorsque l'utilisateur clique sur l'icon)
-    iconGalleryColumn.addEventListener('click', (e) => {
-        index = 0;
-        // Au moment ou l'utilisateur clique sur l'icon, pour chaque image, supression de la classe Mosaïque et ajout de la classe Colonne tant qu'il y a des images
-        while(index < imgGallery.length){
-            imgGallery[index].classList.remove("imgGalleryMosaic");
-            imgGallery[index].classList.add("imgGalleryColumn");
-            index = index + 1;
-        }
+        // Listener sur l'icon Mosaïque au click de la souris (l'évenement se passe lorsque l'utilisateur clique sur l'icon)
+        iconGalleryMosaic.addEventListener('click', (e) => {
+            index = 0;
+            // Au moment ou l'utilisateur clique sur l'icon, pour chaque image, supression de la classe colonne et ajout de la classe Mosaïque tant qu'il y a des images
+            while (index < imgGallery.length) {
+                imgGallery[index].classList.remove("imgGalleryColumn");
+                imgGallery[index].classList.add("imgGalleryMosaic");
+                index = index + 1;
+            }
 
-    })
+        })
+
+        // Listener sur l'icon Colonne au click de la souris (l'évenement se passe lorsque l'utilisateur clique sur l'icon)
+        iconGalleryColumn.addEventListener('click', (e) => {
+            index = 0;
+            // Au moment ou l'utilisateur clique sur l'icon, pour chaque image, supression de la classe Mosaïque et ajout de la classe Colonne tant qu'il y a des images
+            while (index < imgGallery.length) {
+                imgGallery[index].classList.remove("imgGalleryMosaic");
+                imgGallery[index].classList.add("imgGalleryColumn");
+                index = index + 1;
+            }
+
+        })
+    }
+
+    addImageGallery();
+
 
     // Ajout d'une image
 
-    // Affichage du formulaire d'ajout
-    // Formulaire en HTML / CSS qui s'affiche au click du +
 
     // Ajout de l'image à la gallerie
-    // Incorporer l'image au bon endroit avec comme source l'url de l'image stocké dans une variable
+
+
+    // Incorporer l'image au bon endroit avec comme source de l'image l'url de l'image choisie stocké dans une variable
+    // Lélément form du bloc HTML de la page Gallerie éxécutera cette action (la fonction(e)) lors de l'envoi
+    formGallery.onsubmit = function (e) {
+
+        // preventDefault permet d'annuler le rechargement de la page par défaut du bouton envoyer du formulaire
+        e.preventDefault();
+
+        // La variable addImage prend pour valeur l'url saisie dans le champ du formulaire formGallery 
+        let addImage = document.getElementById('url').value;
+
+        // La variable imgGallery prend pour valeur un tableau avec les images de la div portant l'id imgGallery (pour vérification du format d'affichage)
+        let testImageGallery = document.querySelectorAll('#imgGallery img');
+
+        // Si lors de l'ajout les images déjà présentes ont la classe colonne et mosaic ou juste colonne
+        if ((testImageGallery[0].classList.value === "imgGalleryColumn imgGalleryMosaic") || (testImageGallery[0].classList.value === "imgGalleryColumn")) {
+            // Alors rajoute l'image avec le format colonne
+            $('<img class="imgGalleryColumn" src="' + addImage + '" alt="Image ajouté">').prependTo('#imgGallery');
+        } else {
+            // Sinon rajoute l'image avec le format Mosaïque
+            $('<img class="imgGalleryMosaic" src="' + addImage + '" alt="Image ajouté">').prependTo('#imgGallery');
+        }
+        addImageGallery();
+    }
+
 });

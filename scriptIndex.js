@@ -60,7 +60,6 @@ $(document).ready(function () {
     form.onsubmit = function (e) {
         // preventDefault permet d'annuler le rechargement de la page par défaut du bouton envoyer du formulaire
         e.preventDefault();
-        console.log(e);
         // la variable name prend pour valeur la valeur de l'input du DOM avec l'id name
         let name = document.getElementById('name').value;
         // la variable joke prend pour valeur la valeur de l'input du DOM avec l'id joke 

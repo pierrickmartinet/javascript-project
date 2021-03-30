@@ -44,11 +44,29 @@
 
     <main>
         <h1>Gallerie</h1>
+        <!-- Icon -->
         <div id="divIconGallery">
             <img class="iconGalleryMosaic" src="images/mosaicIcon.svg" alt="icone affichage mosaïque">
             <img class="iconGalleryColumn" src="images/columnIcon.svg" alt="icone affichage colonne">
             <img class="iconGalleryAdd" src="images/addIcon.svg" alt="icone ajout d'une image">
         </div>
+
+        <!-- Formulaire d'ajout d'une image -->
+        <div class="divContainerFormGallery divContainerFormGalleryNone">
+        <div id="divFormGallery">
+            <h2 class="form titleFont">Poste ton image !</h2>
+            <form id="formGallery">
+                <div class="form">
+                    <input type="text" name="url" id="url" placeholder="Enter the URL">
+                </div>
+                <div class="form">
+                    <input type="submit" value="Envoyer">
+                </div>
+            </form>
+        </div>
+        </div>
+
+        <!-- Gallerie d'image -->
         <div id="imgGallery">
             <img class="imgGalleryColumn imgGalleryMosaic" src="images/chuckGallery1.jpg" alt="Image de chuck Norris">
             <img class="imgGalleryColumn imgGalleryMosaic" src="images/chuckGallery2.jpg" alt="Image de chuck Norris">
