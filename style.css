@@ -140,7 +140,7 @@ justify-content: center;
   }
 
 
-/* Formulaire */
+/* Formulaire Index */
 
 .form{
   display: flex;
@@ -156,6 +156,26 @@ justify-content: center;
   padding: 10px 0px;
 }
 
+/* Formulaire gallerie */
+
+.divContainerFormGallery{
+  display: flex;
+  justify-content: center;
+}
+
+.divContainerFormGalleryNone{
+  display: none;
+}
+
+#divFormGallery{
+  border: 4px solid;
+  border-radius: 50px;
+  background-color: #CCDAD1;
+  padding: 1% 0%;
+  margin: 1% 0%;
+  height: auto;
+  width: 50%;
+}
 
 /* Gallery image */
 
@@ -184,16 +204,19 @@ justify-content: center;
 .iconGalleryMosaic{
   width: 5%;
   height: auto;
+  cursor: pointer;
 }
 
 .iconGalleryColumn{
   width: 5%;
   height: auto;
+  cursor: pointer;
 }
 
 .iconGalleryAdd{
   width: 5%;
   height: auto;
+  cursor: pointer;
 }
 
 #divIconGallery{
