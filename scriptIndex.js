@@ -28,7 +28,9 @@ $(document).ready(function () {
         });
 
 
-    //Fonction d'affichage des articles dans le DOM
+
+    //Fonction d'affichage des blagues dans le DOM
+
     function createJoke(index, data) {
         while (index < data.value.length) {
             // Récupère dans l'objet data la propriété joke, la place dans une div et place cette div dans la div "feed"
@@ -65,7 +67,22 @@ $(document).ready(function () {
         // la variable joke prend pour valeur la valeur de l'input du DOM avec l'id joke 
         let joke = document.getElementById('joke').value;
         // les variables name et joke sont insérés dans le DOM avec les autres blagues
-        $('<div class="blagues">'+ '<div>' + name + '</div>' + '<div>' + joke + '</div>' + '</div>').prependTo('#feed');
+        $('<div class="blagues"> <p><b>' + name + '</b></p><p>' + joke + '</p> <img class="crossRemove" src="images/remove.svg "alt="croix supprimer"></img>' + '</div>').prependTo('#feed');
+    
+
+
+        // Suppression image
+
+        // La variable crossRemoveImg prend pour valeur l'image croix rouge
+        let crossRemoveImg = document.querySelector('.crossRemove');
+
+        // Au click sur la croix rouge
+        crossRemoveImg.addEventListener('click', (e) => {
+        
+        // L'élément parent de l'élément cliqué se supprime
+        e.target.parentElement.remove();
+        })
+    
     }
 
 });
