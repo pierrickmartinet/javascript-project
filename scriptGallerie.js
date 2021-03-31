@@ -56,8 +56,7 @@ $(document).ready(function () {
 
     function addImageGallery() {
         // La variable imgGallery prend pour valeur un tableau avec les images de la div portant l'id imgGallery
-        let imgGallery = document.querySelectorAll('#imgGallery img');
-
+        let imgGallery = document.querySelectorAll('#imgGallery div');
 
         // Listener sur l'icon Mosaïque au click de la souris (l'évenement se passe lorsque l'utilisateur clique sur l'icon)
         iconGalleryMosaic.addEventListener('click', (e) => {
@@ -104,17 +103,34 @@ $(document).ready(function () {
         let addImage = document.getElementById('url').value;
 
         // La variable imgGallery prend pour valeur un tableau avec les images de la div portant l'id imgGallery (pour vérification du format d'affichage)
-        let testImageGallery = document.querySelectorAll('#imgGallery img');
+        let testImageGallery = document.querySelectorAll('#imgGallery div');
 
         // Si lors de l'ajout les images déjà présentes ont la classe colonne et mosaic ou juste colonne
-        if ((testImageGallery[0].classList.value === "imgGalleryColumn imgGalleryMosaic") || (testImageGallery[0].classList.value === "imgGalleryColumn")) {
-            // Alors rajoute l'image avec le format colonne
-            $('<img class="imgGalleryColumn" src="' + addImage + '" alt="Image ajouté">').prependTo('#imgGallery');
+        if ((testImageGallery[0].classList.value === "imgGalleryColumn imgGalleryMosaic") || (testImageGallery[0].classList.value === "remove imgGalleryColumn")|| (testImageGallery[0].classList.value === "imgGalleryColumn")) {
+            // Alors rajoute une div dans le DOM avec l'image en format (taille) colonne ainsi qu'une croix rouge (img) pour remove
+            $('<div class="remove imgGalleryColumn"><img class="crossRemove" src="images/remove.svg "alt="croix supprimer"><img class="imgGallery" src="' + addImage + '"alt="Image ajouté"></div>').prependTo('#imgGallery');
         } else {
-            // Sinon rajoute l'image avec le format Mosaïque
-            $('<img class="imgGalleryMosaic" src="' + addImage + '" alt="Image ajouté">').prependTo('#imgGallery');
+            // Sinon rajoute une div dans le DOM avec l'image en format (taille) Mosaïque ainsi qu'une croix rouge (img) pour remove
+            $('<div class="remove imgGalleryMosaic"><img class="crossRemove" src="images/remove.svg "alt="croix supprimer"><img class="imgGallery" src="' + addImage + '" alt="Image ajouté"></div>').prependTo('#imgGallery');
         }
         addImageGallery();
+
+
+        // Suppression image
+
+        let crossRemoveImg = document.querySelector('.crossRemove');
+
+        crossRemoveImg.addEventListener('click', (e) => {
+
+        e.target.parentElement.remove();
+    
+        })
     }
+
+
+
+    
+
+    
 
 });
