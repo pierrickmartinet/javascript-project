@@ -85,6 +85,8 @@ main{
     background-color: #CCDAD1;
     border: 5px solid #000F08;
     border-radius: 20px;
+
+    position: relative;
 }
 
 

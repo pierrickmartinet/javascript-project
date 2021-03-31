@@ -116,12 +116,16 @@ $(document).ready(function () {
         addImageGallery();
 
 
+        
         // Suppression image
 
+        // La variable crossRemoveImg prend pour valeur l'image croix rouge
         let crossRemoveImg = document.querySelector('.crossRemove');
 
+        // Au click sur la croix rouge
         crossRemoveImg.addEventListener('click', (e) => {
-
+        
+        // L'élément parent de l'élément cliqué se supprime
         e.target.parentElement.remove();
     
         })
