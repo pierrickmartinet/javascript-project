@@ -21,6 +21,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
     <script src="scriptGallerie.js" defer></script>
 
+    <!-- Carroussel avec plugin jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js" defer></script>
+
 </head>
 
 <body>
@@ -44,6 +49,15 @@
 
     <main>
         <h1>Gallerie</h1>
+
+        <!-- Carrousel d'image -->
+        <div class="fotorama" data-transition="slide" data-loop="true" data-autoplay="4000">
+            <img src="images/bandeauPub1.svg">
+            <img src="images/bandeauPub2.svg">
+            <img src="images/bandeauPub3.svg">
+            <img src="images/bandeauPub4.svg">
+        </div>
+
         <!-- Icon -->
         <div id="divIconGallery">
             <img class="iconGalleryMosaic" src="images/mosaicIcon.svg" alt="icone affichage mosaïque">
