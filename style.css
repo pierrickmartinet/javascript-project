@@ -270,3 +270,16 @@ body{
   line-height: 100px;
   font-size: 60px;
 }
+
+#points{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#reinitialiserScore{
+  margin-bottom: 20px;
+}
+
+.titlePoint{
+  margin-top: 50px;
+}
