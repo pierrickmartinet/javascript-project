@@ -94,7 +94,7 @@ $(document).ready(function () {
 
     // Incorporer l'image au bon endroit avec comme source de l'image l'url de l'image choisie stocké dans une variable
     // Lélément form du bloc HTML de la page Gallerie éxécutera cette action (la fonction(e)) lors de l'envoi
-    formGallery.onsubmit = function (e) {
+    formGallery.addEventListener('submit', (e) => {
 
         // preventDefault permet d'annuler le rechargement de la page par défaut du bouton envoyer du formulaire
         e.preventDefault();
@@ -106,7 +106,7 @@ $(document).ready(function () {
         let testImageGallery = document.querySelectorAll('#imgGallery div');
 
         // Si lors de l'ajout les images déjà présentes ont la classe colonne et mosaic ou juste colonne
-        if ((testImageGallery[0].classList.value === "imgGalleryColumn imgGalleryMosaic") || (testImageGallery[0].classList.value === "remove imgGalleryColumn")|| (testImageGallery[0].classList.value === "imgGalleryColumn")) {
+        if ((testImageGallery[0].classList.value === "imgGalleryColumn imgGalleryMosaic") || (testImageGallery[0].classList.value === "remove imgGalleryColumn") || (testImageGallery[0].classList.value === "imgGalleryColumn")) {
             // Alors rajoute une div dans le DOM avec l'image en format (taille) colonne ainsi qu'une croix rouge (img) pour remove
             $('<div class="remove imgGalleryColumn"><img class="crossRemove" src="images/remove.svg "alt="croix supprimer"><img class="imgGallery" src="' + addImage + '"alt="Image ajouté"></div>').prependTo('#imgGallery');
         } else {
@@ -116,25 +116,19 @@ $(document).ready(function () {
         addImageGallery();
 
 
-        
+
         // Suppression image
 
         // La variable crossRemoveImg prend pour valeur l'image croix rouge
         let crossRemoveImg = document.querySelector('.crossRemove');
 
         // Au click sur la croix rouge
-        crossRemoveImg.addEventListener('click', (e) => {
-        
-        // L'élément parent de l'élément cliqué se supprime
-        e.target.parentElement.remove();
-    
-        })
-    }
+        crossRemoveImg.onclick = function (e) {
 
+            // L'élément parent de l'élément cliqué se supprime
+            e.target.parentElement.remove();
 
-
-    
-
-    
+        }
+    })
 
 });

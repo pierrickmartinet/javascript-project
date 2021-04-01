@@ -18,7 +18,8 @@
     <meta name="Description" content="Bienvenue sur le 1er projet Javascript de Pierrick MARTINET.">
 
     <!--Srcipt-->
-    <script src="scriptGallerie.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+    <script src="scriptJeu.js" defer></script>
 
 </head>
 
@@ -28,25 +29,43 @@
         <div class="titleHeader">
             <h2 class="textWhite titleFont">Javascript Project</h2>
         </div>
-        <div>
-            <nav>
-                <div>
-                    <a href="index.html">Accueil</a>
-                </div>
-                <div>
-                    <a href="gallerie.html">Gallerie</a>
-                </div>
-                <div>
-                    <a href="jeu.html">Jeu</a>
-                </div>
-            </nav>
+        <!-- Menu dropdown -->
+        <div class="dropdown closed">
+            <h2 class="icon">Menu<span>∆</span></h2>
+            <ul class="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="gallerie.html">Gallerie</a></li>
+                <li><a href="jeu.html">Jeu</a></li>
+            </ul>
         </div>
 
     </header>
 
 
     <main>
-        <h1>Jeu</h1>
+        <h1>Jeu Tic Tac Toe</h1>
+
+        <section id="jeu" class="titleFont">
+
+            <!-- 9 div pour les 9 cases de la grille du jeu avec chacune un index numéroté de 0 à 8 -->
+            <div data-index= 0 class="case"></div>
+            <div data-index= 1 class="case"></div>
+            <div data-index= 2 class="case"></div>
+            <div data-index= 3 class="case"></div>
+            <div data-index= 4 class="case"></div>
+            <div data-index= 5 class="case"></div>
+            <div data-index= 6 class="case"></div>
+            <div data-index= 7 class="case"></div>
+            <div data-index= 8 class="case"></div>
+
+        </section>
+
+        <!-- Titre determinant le tour des joueurs pour jouer -->
+        <h2 id="message" class="titleFont"></h2>
+        
+        <!-- Recommencer la partie -->
+        <button id="recommencer">Recommencer</button>
+
     </main>
 
 
