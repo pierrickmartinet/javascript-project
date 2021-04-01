@@ -247,3 +247,26 @@ cursor: pointer;
   justify-content: space-evenly;
   margin: 4%;
 }
+
+
+/* Jeu */
+
+body{
+  text-align: center;
+}
+
+#jeu{
+  display: grid;
+  /* Nombre de colonne de la grille */
+  grid-template-columns: repeat(3, 1fr);
+  width: 300px;
+  /* Centrer la grille */
+  margin: auto;
+}
+
+.case{
+  border: 1px solid black;
+  height: 100px;
+  line-height: 100px;
+  font-size: 60px;
+}
